@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <meta charset="UTF-8" />
+    <style>
+      .ico {
+        color: white;
+        font-size: 2vw;
+        margin-bottom: 5%;
+        margin-top: auto !important;
+        display: block;
+        position: absolute;
+        bottom: 5%;
+         
+        left: 50%;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .bounce {
+        -webkit-animation: bounce 2s;
+        animation: bounce 2s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+      }
+
+      @-webkit-keyframes bounce {
+        0%,
+        25%,
+        50%,
+        75%,
+        100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        40% {
+          -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+        }
+        60% {
+          -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        25%,
+        50%,
+        75%,
+        100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        40% {
+          -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+        }
+        60% {
+          -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
+        }
+      }
+
+      .ok {
+        /* padding-top: 15%;
+        padding-bottom: 15%; */
+        background-image: url("about.png");
+        background-attachment: fixed;
+        text-align: center;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* display: inline-block;
+        vertical-align: middle; */
+      }
+      .head {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 4vw;
+        line-height: 101px;
+        color: white;
+      }
+      .all {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .detail,
+      .detail-2 {
+        color: white;
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.1vw;
+        line-height: 154.7%;
+      }
+      .ab1 {
+        width: 100% !important;
+        background: #fafafa;
+      }
+      .aut {
+        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
+      }
+      .me {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 3.5vw;
+        line-height: 88px;
+      }
+      .me1 {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 3.5vw;
+      }
+      .ne {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5vw;
+        line-height: 38px;
+      }
+      .topy {
+        padding-top: 5%;
+        padding-bottom: 1%;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      .head211 {
+        font-size: 3.5vw;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .dot {
+        height: 10vw;
+        width: 10vw;
+        background: #007aff;
+        border-radius: 50%;
+        display: inline-block;
+        color: #ffffff;
+        position: relative;
+        margin: 0;
+        vertical-align: middle;
+        box-sizing: content-box;
+        white-space: nowrap;
+      }
+      .dot:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 100%;
+        height: 0;
+      }
+      .ne1 {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.1vw;
+        line-height: 154.7%;
+        /* width: 40%; */
+      }
+      #carousel {
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+
+        margin-bottom: 5%;
+        padding: 5%;
+      }
+
+      #carousel .slide,
+      #carousel .space {
+        display: inline;
+        vertical-align: top;
+        margin-right: 1%;
+      }
+      .space {
+        padding: 20%;
+      }
+      .imc {
+        width: 30%;
+        cursor: grab;
+      }
+      *::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      * {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+      .sdot {
+        color: #007aff;
+        font-size: 6.5vw;
+      }
+      .car {
+        /* background-attachment: fixed; */
+        width: 100% !important;
+        padding: 0 !important;
+      }
+      @media only screen and (max-width: 1000px) {
+        .ico {
+          font-size: 20px;
+        }
+        .me {
+          font-size: 30px;
+          line-height: 38px;
+        }
+        .ne {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .imc {
+          width: 80%;
+          cursor: grab;
+        }
+        .ne1 {
+          font-size: 15px;
+          line-height: 154.7%;
+        }
+        .me1,
+        .head211 {
+          font-size: 30px;
+          line-height: 38px;
+        }
+        .dot {
+          height: 90px;
+          width: 90px;
+        }
+        br {
+          display: none;
+        }
+        .head {
+          font-size: 30px;
+          line-height: 38px;
+        }
+        .all {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translateX(-50%) translateY(-50%);
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+        .detail,
+        .detail-2 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+      $.get("nav.html", function (data) {
+        $("#nav-placeholder").replaceWith(data);
+      });
+      $.get("footer.html", function (data1) {
+        $("#footer").replaceWith(data1);
+      });
+    </script>
+    <!-- <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("nav-placeholder").style.top = "0";
+        } else {
+          document.getElementById("nav-placeholder").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    </script> -->
+    <div class="container-fluid ok">
+      <!-- <img class="img" src="about.png" /> -->
+
+      <div class="all">
+        <h1 class="head">About</h1>
+        <p class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat
+          varius sollicitudin pharetra tincidunt
+        </p>
+        <button type="button" class="btn btn-primary btn-lg my-2">Register now</button>
+        <!-- <i style="font-size: 24px; margin-top: 10%; color: white" class="fas"
+        >&#xf309;</i> -->
+      </div>
+      <i class="fa fa-angle-double-down ico bounce" aria-hidden="true"></i>
+    </div>
+    <div class="container-fluid ab1">
+      <div class="container aut p-lg-4 px-lg-5 p">
+        <div class="part">
+          <h1 class="me">10000+</h1>
+          <p class="ne">Downloads</p>
+        </div>
+        <div class="part">
+          <h1 class="me">4.5</h1>
+          <p class="ne">Rating</p>
+        </div>
+        <div class="part">
+          <h1 class="me">40+</h1>
+          <p class="ne">Countries</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div
+        class="topy"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        data-aos-anchor-placement="center-bottom"
+      >
+        <h1 class="me1">
+          It Takes Good people
+          <span class="dot"
+            ><h1
+              class="head211"
+              data-aos="fade-left"
+              data-aos-duration="3000"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              do
+            </h1></span
+          >
+          <br />good things<span class="sdot">.</span>
+        </h1>
+      </div>
+      <div class="row px-4 seen mx-md-4 mx-lg-4">
+        <!--Grid column-->
+        <div class="col-lg-5 col-md-10 px-4">
+          <!--First row-->
+          <p
+            class="ne1 my-4"
+            data-aos="fade"
+            data-aos-duration="3000"
+            data-aos-anchor-placement="bottom-bottom"
+          >
+            Imagine a future during which robotics and AI will allow any folks ,
+            of all ages to simply and quickly find answers, create products or
+            accomplish tasks, all just by expressing our desires. Imagine a
+            future during which robotics and AI will allow any folks , of all
+            ages to simply and quickly find answers, create products or
+            accomplish tasks, all just by expressing our desires.
+          </p>
+          <!--/First row-->
+        </div>
+        <!--/Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-5 col-md-10 px-4">
+          <p
+            class="ne1 my-4"
+            data-aos="fade"
+            data-aos-duration="3000"
+            data-aos-anchor-placement="bottom-bottom"
+          >
+            Imagine a future during which robotics and AI will allow any folks ,
+            of all ages to simply and quickly find answers, create products or
+            accomplish tasks, all just by expressing our desires.
+          </p>
+        </div>
+        <!--/Grid column-->
+      </div>
+      <!--/Grid row-->
+
+      <div
+        id="carousel"
+        data-aos="fade-right"
+        data-aos-duration="3000"
+        data-aos-anchor-placement="center-bottom"
+      >
+        <div class="slide">
+          <img class="imc" src="pep2.png" />
+        </div>
+        <div class="slide">
+          <img class="imc" src="pep1.png" />
+        </div>
+        <div class="slide">
+          <img class="imc" src="pep2.png" />
+        </div>
+        <div class="slide">
+          <img class="imc" src="pep1.png" />
+        </div>
+        <div class="slide">
+          <img class="imc" src="pep2.png" />
+        </div>
+        <div class="slide">
+          <img class="imc" src="pep1.png" />
+        </div>
+      </div>
+
+      <!-- <script>
+            (function () {
+              function scrollHorizontally(e) {
+                e = window.event || e;
+                var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+                document.getElementById("carousel").scrollLeft -= delta * 100; // Multiplied by 40
+                e.preventDefault();
+              }
+              if (document.getElementById("carousel").addEventListener) {
+                // IE9, Chrome, Safari, Opera
+                document
+                  .getElementById("carousel")
+                  .addEventListener("mousewheel", scrollHorizontally, false);
+                // Firefox
+                document
+                  .getElementById("carousel")
+                  .addEventListener("DOMMouseScroll", scrollHorizontally, false);
+              } else {
+                // IE 6/7/8
+                document
+                  .getElementById("carousel")
+                  .attachEvent("onmousewheel", scrollHorizontally);
+              }
+            })();
+          </script> -->
+    </div>
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide carousel-fade"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="car1.png" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="car1.png" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="car1.png" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div
+        class="topy py-lg-5"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+        data-aos-anchor-placement="center-bottom"
+      >
+        <h1 class="me1">
+          How EDAPT Wo<span class="dot"
+            ><h1
+              class="head211"
+              data-aos="fade-left"
+              data-aos-duration="3000"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              rks?
+            </h1></span
+          >
+        </h1>
+      </div>
+      <div class="row px-4 seen mx-md-4 mx-lg-4">
+        <!--Grid column-->
+        <div class="col-lg-5 col-md-10 px-4">
+          <!--First row-->
+          <p
+            class="ne1 my-4 fade"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            data-aos-anchor-placement="bottom-bottom"
+          >
+            Imagine a future during which robotics and AI will allow any folks ,
+            of all ages to simply and quickly find answers, create products or
+            accomplish tasks, all just by expressing our desires. Imagine a
+            future during which robotics and AI will allow any folks , of all
+            ages to simply and quickly find answers, create products or
+            accomplish tasks, all just by expressing our desires.
+          </p>
+          <!--/First row-->
+        </div>
+        <!--/Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-5 col-md-10 px-4">
+          <p
+            class="ne1 my-4 fade"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            data-aos-anchor-placement="bottom-bottom"
+          >
+            Imagine a future during which robotics and AI will allow any folks ,
+            of all ages to simply and quickly find answers, create products or
+            accomplish tasks, all just by expressing our desires.
+          </p>
+        </div>
+        <!--/Grid column-->
+      </div>
+    </div>
+    <div id="footer"></div>
+
+    <script>
+      AOS.init();
+    </script>
+    
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

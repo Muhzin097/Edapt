@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>My Book</title>
+    <meta charset="UTF-8" />
+    <style>
+      .navbar {
+        width: 100%;
+        scroll-snap-align: start;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        padding-right: 5% !important;
+        padding-left: 5% !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between !important;
+        background-color: transparent !important;
+      }
+      .navbar-right {
+        float: right !important;
+        right: 0;
+        margin-left: auto !important;
+      }
+      .navbar-brand {
+        margin-right: auto;
+      }
+      .bg-dark {
+        background: transparent !important;
+      }
+      a {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        color: white;
+        /* font-size: calc(16px + (8)*(100vw - 300px)/1500  ); */
+      }
+      .smart-scroll {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        background-color: transparent !important;
+      }
+      .scrolled-down {
+        transform: translateY(-100%);
+        transition: all 0.3s ease-in-out;
+      }
+      .scrolled-up {
+        transform: translateY(0);
+        transition: all 0.3s ease-in-out;
+      }
+      @media (min-width: 800px) and (max-width: 850px) {
+        .navbar:not(.top-nav-collapse) {
+          background-color: transparent !important;
+        }
+      }
+      .view,
+      body,
+      html {
+        height: 100%;
+      }
+       
+      .page-footer,
+      .top-nav-collapse {
+        background-color: transparent !important;
+      }
+      @media only screen and (max-width: 768px) {
+        .navbar {
+          /* background-color: rgba(0, 0, 0, 0.4) !important; */
+          background-color: transparent !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <script>
+      new WOW().init();
+    </script> -->
+
+    <div class="outer">
+      <nav
+        class="navbar smart-scroll fixed-top navbar-expand-lg navbar-dark scrolling-navbar"
+      >
+        <!-- <a class="navbar-brand" href="#">
+            <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            Bootstrap
+          </a> -->
+        <div>
+          <a class="navbar-brand" href="edaptwellness.html">Edapt</a>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <a class="nav-link ex" href="edaptwellness.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ex" href="about.html">About Us</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Login
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Existing</a>
+              <a class="dropdown-item" href="#">New</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li> -->
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        var url = window.location;
+        // Will only work if string in href matches with location
+        $('ul.nav a[href="' + url + '"]')
+          .parent()
+          .addClass("active");
+
+        // Will also work for relative and absolute hrefs
+        $("ul.nav a")
+          .filter(function () {
+            return this.href == url;
+          })
+          .parent()
+          .addClass("active")
+          .parent()
+          .parent()
+          .addClass("active");
+      });
+    </script>
+    <script>
+      
+
+      // detect scroll top or down
+      if ($(".smart-scroll").length > 0) {
+        // check if element exists
+        var last_scroll_top = 0;
+        $(window).on("scroll", function () {
+          scroll_top = $(this).scrollTop();
+          if (scroll_top < last_scroll_top) {
+            $(".smart-scroll")
+              .removeClass("scrolled-down")
+              .addClass("scrolled-up");
+          } else {
+            $(".smart-scroll")
+              .removeClass("scrolled-up")
+              .addClass("scrolled-down");
+          }
+          last_scroll_top = scroll_top;
+        });
+      }
+    </script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

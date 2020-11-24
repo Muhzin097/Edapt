@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>My Book</title>
+    <meta charset="UTF-8" />
+
+    <style>
+      .top {
+        background-image: url("hom.png");
+        background-attachment: fixed;
+        text-align: center;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .head {
+        color: white;
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 4vw;
+        line-height: 101px;
+      }
+      .detail,
+      .detail-2 {
+        color: white;
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.1vw;
+        line-height: 154.7%;
+      }
+      .detail-2 {
+        margin-top: 3%;
+      }
+    
+      .three {
+        display: flex;
+        flex-direction: row !important;
+        padding-left: 5%;
+        padding-right: 5%;
+        flex-wrap: wrap !important;
+        justify-content: space-around;
+      }
+      
+      /* a {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.1vw;
+      } */
+      /* .half {
+        width: 45%;
+        padding: 20px;
+      } */
+      /* .halfi {
+        width: 50%;
+      } */
+      .himg {
+        width: 100%;
+      }
+      .smallh{
+        font-family: Source Sans Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 1.5vw;
+line-height: 38px;
+      }
+      .himg1{
+        width: 30%;
+      }
+      .head2,
+      .head21,
+      .head211 {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 3.5vw;
+        line-height: 41px;
+        position: relative;
+      }
+      .head21 {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .head211 {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .detail3 {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.1vw;
+        line-height: 154.7%;
+      }
+      .head22 {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 3.5vw;
+        line-height: 80px;
+      }
+      .head221 {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 3.5vw;
+        line-height: 80px;
+      }
+      .dot {
+        height: 10vw;
+        width: 10vw;
+        background: #007aff;
+        border-radius: 50%;
+        display: inline-block;
+        color: #ffffff;
+        position: relative;
+        margin: 0;
+        vertical-align: middle;
+
+        line-height: 1;
+        box-sizing: content-box;
+        white-space: nowrap;
+      }
+      .dot:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 100%;
+        height: 0;
+      }
+      .sdot {
+        color: #007aff;
+        font-size: 6.5vw;
+      }
+      .bor {
+        border-style: solid;
+        padding: 20px;
+        min-height: width;
+        min-width: 100%;
+
+        display: inline-block;
+        position: relative;
+      }
+      .bor:after {
+        content: "";
+        display: inline-block;
+        padding-bottom: 100%;
+      }
+      .r1 {
+        width: 55%;
+        height: 55%;
+
+        position: absolute;
+      }
+      .r2 {
+        width: 55%;
+        height: 55%;
+        float: right;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+      }
+      .four {
+   
+         display: flex;
+         flex-direction: row;
+        /* height: 100vh; */
+      }
+       
+      .left {
+        padding: 5%;
+      }
+      .plush {
+        white-space: nowrap;
+
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 3.5vw;
+        line-height: 88px;
+      }
+      .plusp,
+      .detail4 {
+        font-family: Source Sans Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.1vw;
+        line-height: 154.7%;
+      }
+      .plusk {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .dot3 {
+        position: absolute;
+        bottom: 150px;
+        left: -30px;
+
+        color: #007aff;
+        font-size: 13.5vw;
+      }
+      #carousel {
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        margin-top: 5%;
+      }
+
+      #carousel .slide,
+      #carousel .space {
+        display: inline;
+        vertical-align: top;
+      }
+      .space {
+        padding: 20%;
+      }
+      .ico{
+        color: white;
+        font-size: 2vw;
+         margin-bottom: 5%;
+        margin-top: auto !important;
+        display: block;
+      }
+      .dt{
+          font-size: .7vw;
+line-height: 154.7%;
+        }
+      .bounce {
+	-webkit-animation: bounce 2s;
+	        animation: bounce 2s;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+	0%,
+	25%,
+	50%,
+	75%,
+	100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-20px);
+		        transform: translateY(-20px);
+	}
+	60% {
+		-webkit-transform: translateY(-12px);
+		        transform: translateY(-12px);
+	}
+}
+
+@keyframes bounce {
+	0%,
+	25%,
+	50%,
+	75%,
+	100% {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+	}
+	40% {
+		-webkit-transform: translateY(-20px);
+		        transform: translateY(-20px);
+	}
+	60% {
+		-webkit-transform: translateY(-12px);
+		        transform: translateY(-12px);
+	}
+}
+
+      .imc {
+        width: 20%;
+        cursor: grab;
+      }
+      #carousel::-webkit-scrollbar,.container-fluid::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      #carousel,.container-fluid{
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+      .six {
+        padding-top: 20%;
+        padding-bottom: 20%;
+      }
+      .centerp {
+        height: 100vh;
+        position: relative;
+      }
+      .centerc {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      /* html {
+        scroll-snap-points-y: repeat(100vh);
+        scroll-snap-type: y mandatory;
+      } */
+      .container-fluid {
+        scroll-snap-align: start;
+        flex-flow: column nowrap;
+        overflow: auto;
+        display: flex;
+        flex: none;
+      }
+      .all {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      rows{
+        display: flex;
+        flex-direction: row;
+      }
+      @media only screen and (max-width: 1000px) {
+        .head,.head2,.head21,.plush,.head221,.head211,.head22 {
+          font-size: 30px;
+          line-height: 38px;
+        }
+        .ico{
+          font-size: 20px;
+        }
+        .smallh{
+          font-size: 18px;
+line-height: 23px;
+        }
+        .dt{
+          font-size: 12px;
+line-height: 154.7%;
+        }
+        .all {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translateX(-50%) translateY(-50%);
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+        .detail,
+        .detail-2,.detail3,.plusp,.detail4 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .dot{
+          height: 90px;
+          width: 90px;
+        }
+        /* .top{
+          height: 100vh;
+        } */
+        /* .half {
+          width: 100%;
+        } */
+        .three {
+          display: flex;
+          flex-direction: column;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .bor {
+          width: 90% !important;
+          min-width: 300px;
+          min-height: 300px;
+        }
+        .imc{
+          width: 70%;
+        }
+      }
+      @media only screen and (min-width: 1000px) {
+        
+        .head221 {
+          margin-left: -17%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="nav-placeholder"></div>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script>
+      $.get("nav.html", function (data) {
+        $("#nav-placeholder").replaceWith(data);
+      });
+      $.get("footer.html", function (data1) {
+        $("#footer").replaceWith(data1);
+      });
+    </script>
+    </div>
+    <div class="container-fluid top">
+      <div class="all">
+        <h1 class="head">Edapt Wellness</h1>
+        <p class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat
+          varius sollicitudin pharetra tincidunt
+        </p>
+        <!-- <p class="detail-2">Register now</p> -->
+        <button type="button" class="btn btn-primary btn-lg my-2">Register now</button>
+        <!-- <i style="font-size: 24px; margin-top: 10%; color: white" class="fas"
+        >&#xf309;</i> -->
+      
+      </div>
+      <i class="fa fa-angle-double-down ico mx-auto bounce"  aria-hidden="true"></i>
+    </div>
+    <div class="container-fluid py-5" style="background: #FAFAFA; ">
+      <div
+        class="container-fluid three py-5 "
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        data-aos-duration="3000"
+      >
+        <div class=" col-sm-12 col-md-5 col-lg-5  ">
+          <!-- <img class="himg" src="twopic.png" /> -->
+          <div class="bor">
+            <img
+              class="r1"
+              data-aos="fade-up-right"
+              data-aos-duration="3000"
+              src="r1.png"
+            />
+            <img
+              class="r2"
+              data-aos="fade-up-left"
+              data-aos-duration="3000"
+              src="r2.png"
+            />
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-5 col-lg-5 py-4 px-0">
+          <h1 class="head2">
+            Our Vision
+            <span class="dot"><h1 class="head21">And</h1></span>Mission<span
+              class="sdot"
+              >.</span
+            >
+          </h1>
+          <p class="detail3">
+            Imagine a future during which robotics and AI will allow any folks ,
+            of all ages to simply and quickly find answers, create products or
+            accomplish tasks, all just by expressing our desires.
+          </p>
+          <p class="detail3">
+            Imagine a future during which robotics and AI will allow any folks ,
+            of all ages to simply and quickly find answers, create products or
+            accomplish tasks, all just by expressing our desires.
+          </p>
+          <p class="detail3">
+            Imagine a future during which robotics and AI will allow any folks ,
+            of all ages to simply and quickly find answers, create products or
+            accomplish tasks, all just by expressing our desires.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mb-lg-5">
+      <div class="container row p-lg-5 m-lg-5 my-4">
+        <!-- <div class="dot3">.</div> -->
+        <div
+          class="col-sm-12 col-md-5 col-lg-4 "
+          data-aos="fade-right"
+          data-aos-anchor-placement="center-center"
+          data-aos-duration="3000"
+        >
+          <h1 class="plush">Edapt Plus</h1>
+        </div>
+        <div class="col-sm-12 col-md-7 col-lg-8 ">
+          <p class="plusp">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            mauris sed amet, justo. A mattis neque urna vel tellus. Cras ac,
+            laoreet vel dolor arcu consectetur. Aliquam, ac turpis sit porttitor
+            habitasse tempus vitae sodales. Vivamus mi quam metus laoreet
+            hendrerit a. Amet, leo non euismod sapien fames. Cursus.
+          </p>
+          <button type="button" class="btn btn-lg btn-dark">Learn more</button>
+        </div>
+      </div>
+      <div class=" mb-lg-5" id="carousel" data-aos="fade-right" data-aos-duration="3000">
+        <div class="space"></div>
+        <div class="slide">
+          <img class="imc" src="im1.png" />
+        </div>
+        <div class="slide">
+          <img class="imc" src="im2.png" />
+        </div>
+        <div class="slide">
+          <img class="imc" src="im3.png" />
+        </div>
+        <div class="slide">
+          <img class="imc" src="im1.png" />
+        </div>
+        <div class="slide">
+          <img class="imc" src="im2.png" />
+        </div>
+        <div class="slide">
+          <img class="imc" src="im3.png" />
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        function scrollHorizontally(e) {
+          e = window.event || e;
+          var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+          document.getElementById("carousel").scrollLeft -= delta * 100; // Multiplied by 40
+          e.preventDefault();
+        }
+        if (document.getElementById("carousel").addEventListener) {
+          // IE9, Chrome, Safari, Opera
+          document
+            .getElementById("carousel")
+            .addEventListener("mousewheel", scrollHorizontally, false);
+          // Firefox
+          document
+            .getElementById("carousel")
+            .addEventListener("DOMMouseScroll", scrollHorizontally, false);
+        } else {
+          // IE 6/7/8
+          document
+            .getElementById("carousel")
+            .attachEvent("onmousewheel", scrollHorizontally);
+        }
+      })();
+    </script>
+    <div class="container-fluid mt-lg-5">
+      <div class=" row   my-4 py-4">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <img
+            class="himg"
+            data-aos="fade-right"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-duration="3000"
+            src="iml.png"
+          />
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-6 "
+          data-aos="fade-left"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-duration="3000"
+        >
+          <h1 class="head221">
+            <span class="dot"
+              ><h1 class="head211">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Su
+              </h1></span
+            >perAchievers
+          </h1>
+          <p class="detail4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            mauris sed amet, justo. A mattis neque urna vel tellus. Cras ac,
+            laoreet vel dolor arcu consectetur. Aliquam, ac turpis sit porttitor
+            habitasse tempus vitae sodales. Vivamus mi quam metus laoreet
+            hendrerit a. Amet, leo non euismod sapien fames. Cursus.
+          </p>
+          <button type="button" class="btn btn-lg btn-dark">Know more</button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt-lg-5">
+      <div class="row p-lg-5 m-lg-5 my-4">
+        <div
+          class="col-sm-12 col-md-6 col-lg-6"
+          data-aos="fade-right"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-duration="3000"
+        >
+          <h1 class="head22">School</h1>
+          <p class="detail4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            mauris sed amet, justo. A mattis neque urna vel tellus. Cras ac,
+            laoreet vel dolor arcu consectetur. Aliquam, ac turpis sit porttitor
+            habitasse tempus vitae sodales. Vivamus mi quam metus laoreet
+            hendrerit a. Amet, leo non euismod sapien fames. Cursus.
+          </p>
+          <button type="button" class="btn btn-lg btn-dark">Know more</button>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <img
+            class="himg"
+            data-aos="fade-left"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-duration="3000"
+            src="light.png"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid  mt-lg-5">
+      <div class="row p-lg-5 m-lg-5 my-4">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <img
+            class="himg"
+            data-aos="fade-right"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-duration="3000"
+            src="cl.png"
+          />
+        </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-6"
+          data-aos="fade-left"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-duration="3000"
+        >
+          <h1 class="head22">
+            Classroo<span class="dot"><h1 class="head211">m</h1></span>
+          </h1>
+          <p class="detail4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            mauris sed amet, justo. A mattis neque urna vel tellus. Cras ac,
+            laoreet vel dolor arcu consectetur. Aliquam, ac turpis sit porttitor
+            habitasse tempus vitae sodales. Vivamus mi quam metus laoreet
+            hendrerit a. Amet, leo non euismod sapien fames. Cursus.
+          </p>
+          <button type="button" class="btn btn-lg btn-dark">Know more</button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid  mt-lg-5 bg-light p-lg-5 p-sm-2">
+      <h1 class="head22   text-sm-center ">Insights from the Blogs</h1>
+      <p class="detail4  text-sm-center ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse</p>
+<div class="row justify-content-center p-lg-5 m-lg-5">
+  <div class="col-sm-12 col-md-6 col-lg-6">
+    <img
+    class="himg"
+    src="bl1.png"
+  />
+  <h3 class="smallh">
+    Sed ut velit tristique euismod.
+  </h3>
+  <h5 class="dt">
+    Aug 2 2020
+  </h5>
+  <p class="detail4 mr-lg-4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+    mauris sed amet, justo. A mattis neque urna vel tellus. Cras ac,
+    laoreet vel dolor arcu consectetur. Aliquam, ac turpis sit porttitor
+    habitasse tempus vitae sodales. Vivamus mi quam metus laoreet
+    hendrerit a. Amet, leo non euismod sapien fames. Cursus.
+  </p>
+  </div>
+  <div class="col-sm-12 col-md-6 col-lg-6 ">
+    <img
+    class="himg"
+    src="bl2.png"
+  />
+  <h3 class="smallh">
+    Sed ut velit tristique euismod.
+  </h3>
+  <h5 class="dt">
+    Aug 2 2020
+  </h5>
+  <p class="detail4 mr-lg-4">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+    mauris sed amet, justo. A mattis neque urna vel tellus. Cras ac,
+    laoreet vel dolor arcu consectetur. Aliquam, ac turpis sit porttitor
+    habitasse tempus vitae sodales. Vivamus mi quam metus laoreet
+    hendrerit a. Amet, leo non euismod sapien fames. Cursus.
+  </p>
+  </div>
+</div>
+<div class="row justify-content-center p-lg-5  m-lg-5">
+  <div class="col-sm-12 col-md-4 col-lg-4   ">
+    <div class="row  m-2">
+      <img
+      class="himg1"
+      src="bl3.png"
+    />
+    <div  class="mx-4">
+      <h3 class="smallh">
+        Sed ut velit tristique 
+      </h3>
+      <h5 class="dt">
+        Aug 2 2020
+      </h5>
+    </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-4 col-lg-4">
+    <div class="row  m-2">
+      <img
+      class="himg1"
+      src="bl4.png"
+    />
+    <div class="mx-4">
+      <h3 class="smallh">
+        Sed ut velit tristique 
+      </h3>
+      <h5 class="dt">
+        Aug 2 2020
+      </h5>
+    </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-4 col-lg-4">
+    <div class="row  m-2">
+      <img
+      class="himg1"
+      src="bl5.png"
+    />
+    <div  class="mx-4">
+      <h3 class="smallh">
+        Sed ut velit tristique 
+      </h3>
+      <h5 class="dt">
+        Aug 2 2020
+      </h5>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="p-2  mx-auto">
+  <a href="blogs.html"><button type="button"  class="btn btn-lg btn-dark">Know more</button></a>
+</div>
+
+    </div>
+    <div class="container-fluid  mt-lg-5 p-lg-5 p-sm-2 ">
+      <div class=" p-lg-5 mx-lg-5  col-sm-12 col-md-6 col-lg-6 ">
+        <h1 class="head22   ">Contact us</h1>
+        <p class="detail4   ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mauris sed amet, justo. A mattis neque urna vel tellus. Cras ac, laoreet vel dolor arcu consectetur. </p>
+  
+      </div>
+      <div class="row justify-content-between px-lg-5 mx-lg-5  px-md-4  ">
+        <div class="col-sm-12 col-md-5 col-lg-5  p-lg-4 p-md-4 p-sm-4 " style="box-shadow: -4px 6px 26px rgba(0, 0, 0, 0.1);">
+          
+        <p class="detail4 mr-lg-4 ">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          mauris sed amet, justo. A mattis neque urna vel tellus. Cras ac,
+          laoreet vel dolor arcu consectetur. Aliquam, ac turpis sit porttitor
+          habitasse tempus vitae sodales. Vivamus mi quam metus laoreet
+          hendrerit a. Amet, leo non euismod sapien fames. Cursus.
+        </p>
+        </div>
+        <div class="col-sm-12 col-md-5 col-lg-5 p-lg-4 p-md-4 p-sm-4" style="box-shadow: -4px 6px 26px rgba(0, 0, 0, 0.1);">
+          
+          <p class="detail4 mr-lg-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            mauris sed amet, justo. A mattis neque urna vel tellus. Cras ac,
+            laoreet vel dolor arcu consectetur. Aliquam, ac turpis sit porttitor
+            habitasse tempus vitae sodales. Vivamus mi quam metus laoreet
+            hendrerit a. Amet, leo non euismod sapien fames. Cursus.
+          </p>
+          </div>
+      </div>
+     
+    </div>
+    <div id="footer"></div>
+    <script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
+<script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
