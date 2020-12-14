@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link
       rel="stylesheet"
@@ -50,74 +50,364 @@
       .sp {
         background: #2d2d2d;
       }
-      a{
-          font-size: 1.1vw;
+      a {
+        font-size: 1.1vw;
       }
-      .edep{
+      .edep {
         font-size: 2vw;
       }
+      #sy-whatshelp {
+        right: 25px;
+        bottom: 25px;
+        position: fixed;
+        z-index: 9999;
+      }
+
+      #sy-whatshelp a {
+        position: relative;
+      }
+
+      #sy-whatshelp a.sywh-open-services {
+        background-color: #129bf4;
+        color: #fff;
+        line-height: 60px;
+        margin-top: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 23px;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        box-shadow: 2px 2px 8px -3px #000;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        display: inline-block;
+      }
+
+      #sy-whatshelp a.sywh-open-services i {
+        line-height: 60px;
+      }
+
+      #sy-whatshelp a.sywh-open-services i.fa-times {
+        display: none;
+      }
+
+      #sy-whatshelp .sywh-services {
+        width: 60px;
+        height: auto;
+      }
+
+      #sy-whatshelp .sywh-services a {
+        display: none;
+      }
+
+      #sy-whatshelp .sywh-services a i {
+        background-color: #129bf4;
+        color: #fff;
+        line-height: 60px;
+        margin-top: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 23px;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        box-shadow: 2px 2px 8px -3px #000;
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+      }
+
+      #sy-whatshelp .sywh-services a.email i {
+        background-color: #b92b27;
+      }
+
+      #sy-whatshelp .sywh-services a.instagram i {
+        background-color: #e4405f;
+      }
+
+      #sy-whatshelp .sywh-services a.messenger i {
+        background-color: #0084ff;
+      }
+
+      #sy-whatshelp .sywh-services a.whatsapp i {
+        background-color: #25d366;
+      }
+
+      #sy-whatshelp .sywh-services a.call i {
+        background-color: #ff6600;
+      }
+
+      a[data-tooltip] {
+        position: relative;
+      }
+
+      a[data-tooltip]::before,
+      a[data-tooltip]::after {
+        position: absolute;
+        display: none;
+        opacity: 0.85;
+        transition: all 0.3s ease-in-out;
+      }
+
+      a[data-tooltip]::before {
+        content: attr(data-tooltip);
+        background: #000;
+        color: #fff;
+        font-size: 13px;
+        padding: 7px 11px;
+        border-radius: 5px;
+        white-space: nowrap;
+        text-decoration: none;
+      }
+
+      a[data-tooltip]::after {
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        content: "";
+      }
+
+      a[data-tooltip]:hover::before,
+      a[data-tooltip]:hover::after {
+        display: block;
+      }
+
+      a.sywh-open-services[data-tooltip]::before,
+      a.sywh-open-services[data-tooltip]::after {
+        display: block;
+      }
+
+      a.data-tooltip-hide[data-tooltip]::before,
+      a.data-tooltip-hide[data-tooltip]::after {
+        display: none !important;
+      }
+
+      a.sywh-open-services[data-tooltip][data-placement="left"]::before {
+        top: 11px;
+      }
+
+      a[data-tooltip][data-placement="left"]::before {
+        top: -7px;
+        right: 100%;
+        line-height: normal;
+        margin-right: 10px;
+      }
+
+      /* a[data-tooltip][data-placement="left"]::after {
+        border-left-color: #000;
+        border-right: none;
+        top: 50%;
+        right: 100%;
+        margin-top: -6px;
+        margin-right: 4px;
+      } */
+
+      a[data-tooltip][data-placement="right"]::before {
+        top: -7px;
+        left: 100%;
+        line-height: normal;
+        margin-left: 10px;
+      }
+
+      a[data-tooltip][data-placement="right"]::after {
+        border-right-color: #000;
+        border-left: none;
+        top: 50%;
+        left: 100%;
+        margin-top: -6px;
+        margin-left: 4px;
+      }
+
+      a[data-tooltip][data-placement="top"]::before {
+        bottom: 100%;
+        left: 0;
+        margin-bottom: 10px;
+      }
+
+      a[data-tooltip][data-placement="top"]::after {
+        border-top-color: #000;
+        border-bottom: none;
+        bottom: 100%;
+        left: 10px;
+        margin-bottom: 4px;
+      }
+
+      a[data-tooltip][data-placement="bottom"]::before {
+        top: 100%;
+        left: 0;
+        margin-top: 10px;
+      }
+
+      a[data-tooltip][data-placement="bottom"]::after {
+        border-bottom-color: #000;
+        border-top: none;
+        top: 100%;
+        left: 10px;
+        margin-top: 4px;
+      }
+
       @media (min-width: 200px) and (max-width: 800px) {
-        a{
-        font-size: 15px;
-      }
-      .edep{
-        font-size: 30px;
-      }
-      .h11 {
-        font-size: 30px;
-line-height: 38px;
-      }
+        a {
+          font-size: 15px;
+        }
+        .edep {
+          font-size: 30px;
+        }
+        .h11 {
+          font-size: 30px;
+          line-height: 38px;
+        }
       }
     </style>
+    <script>
+      jQuery(function ($) {
+        $("a.sywh-open-services").click(function () {
+          if ($(".sywh-services").hasClass("active")) {
+            $(".sywh-services").removeClass("active");
+            $("a.sywh-open-services i.fa-times").hide();
+            $("a.sywh-open-services i.fa-comments").show();
+            $("a.sywh-open-services").removeClass("data-tooltip-hide");
+            $(".sywh-services a:nth-child(1)").delay(0).fadeOut();
+            $(".sywh-services a:nth-child(2)").delay(150).fadeOut();
+            $(".sywh-services a:nth-child(3)").delay(300).fadeOut();
+            $(".sywh-services a:nth-child(4)").delay(450).fadeOut();
+            $(".sywh-services a:nth-child(5)").delay(600).fadeOut();
+          } else {
+            $(".sywh-services").addClass("active");
+            $("a.sywh-open-services i.fa-comments").hide();
+            $("a.sywh-open-services i.fa-times").show();
+            $("a.sywh-open-services").addClass("data-tooltip-hide");
+            $(".sywh-services a:nth-child(5)").delay(0).fadeIn();
+            $(".sywh-services a:nth-child(4)").delay(150).fadeIn();
+            $(".sywh-services a:nth-child(3)").delay(300).fadeIn();
+            $(".sywh-services a:nth-child(2)").delay(450).fadeIn();
+            $(".sywh-services a:nth-child(1)").delay(600).fadeIn();
+          }
+        });
+      });
+    </script>
   </head>
   <body>
     <!-- Footer -->
     <footer class="page-footer font-small cyan darken-3">
+      <div id="sy-whatshelp">
+        <div class="sywh-services">
+          <a
+            href=""
+            class="messenger"
+            data-tooltip="Livechat"
+            data-placement="left"
+            target="_blank"
+          >
+            <svg
+              width="60px"
+              height="60px"
+              viewBox="0 0 60 60"
+              cursor="pointer"
+            >
+              <svg x="0" y="0" width="60px" height="60px">
+                <g
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <g>
+                    <circle fill="#0A7CFF" cx="30" cy="30" r="30"></circle>
+                    <svg x="10" y="10">
+                      <g
+                        transform="translate(0.000000, -10.000000)"
+                        fill="#FFFFFF"
+                      >
+                        <g id="logo" transform="translate(0.000000, 10.000000)">
+                          <path
+                            d="M20,0 C31.2666,0 40,8.2528 40,19.4 C40,30.5472 31.2666,38.8 20,38.8 C17.9763,38.8 16.0348,38.5327 14.2106,38.0311 C13.856,37.9335 13.4789,37.9612 13.1424,38.1098 L9.1727,39.8621 C8.1343,40.3205 6.9621,39.5819 6.9273,38.4474 L6.8184,34.8894 C6.805,34.4513 6.6078,34.0414 6.2811,33.7492 C2.3896,30.2691 0,25.2307 0,19.4 C0,8.2528 8.7334,0 20,0 Z M7.99009,25.07344 C7.42629,25.96794 8.52579,26.97594 9.36809,26.33674 L15.67879,21.54734 C16.10569,21.22334 16.69559,21.22164 17.12429,21.54314 L21.79709,25.04774 C23.19919,26.09944 25.20039,25.73014 26.13499,24.24744 L32.00999,14.92654 C32.57369,14.03204 31.47419,13.02404 30.63189,13.66324 L24.32119,18.45264 C23.89429,18.77664 23.30439,18.77834 22.87569,18.45674 L18.20299,14.95224 C16.80079,13.90064 14.79959,14.26984 13.86509,15.75264 L7.99009,25.07344 Z"
+                          ></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </g>
+                </g>
+              </svg>
+            </svg>
+          </a>
+          <a
+            href=""
+            class="whatsapp"
+            data-tooltip="WhatsApp"
+            data-placement="left"
+            target="_blank"
+          >
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="" class="call" data-tooltip="Call" data-placement="left">
+            <i class="fa fa-rotate-90 fa-phone"></i>
+          </a>
+        </div>
+        <a
+          class="sywh-open-services"
+          data-tooltip="chat "
+          data-placement="left"
+        >
+          <i class="fa fa-comments"></i>
+          <i class="fa fa-times"></i>
+        </a>
+      </div>
       <div class="container-fluid new">
         <div class="container py-5">
           <h1 class="h11 pt-5">The Edapt is Social</h1>
           <!-- Grid row-->
           <div class="row">
             <!-- Grid column -->
-            <div class="  col-md-12  my-4">
-              <div class="mb-5 d-flex justify-content-sm-center justify-content-around">
+            <div class="col-md-12 my-4">
+              <div
+                class="mb-5 d-flex justify-content-sm-center justify-content-around"
+              >
                 <!-- Facebook -->
-                <a class="fb-ic">
+                <a href=" https://www.facebook.com/edapt.me/" class="fb-ic">
                   <i
                     class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"
                   >
                   </i>
                 </a>
                 <!-- Twitter -->
-                <a class="tw-ic">
+                <a href=" https://twitter.com/edapthere" class="tw-ic">
                   <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x">
                   </i>
                 </a>
                 <!-- Google +-->
-                <a class="gplus-ic">
-                  <i
-                    class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"
-                  >
+                <a href="https://medium.com/@edapt.me" class="gplus-ic">
+                  <i class="fab fa-medium fa-lg white-text mr-md-5 mr-3 fa-2x">
                   </i>
                 </a>
-                
+
                 <!--Linkedin -->
-                <a class="li-ic">
+                <a
+                  href="https://www.linkedin.com/company/edapteducation/"
+                  class="li-ic"
+                >
                   <i
                     class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"
                   >
                   </i>
                 </a>
                 <!--Instagram-->
-                <a class="ins-ic">
+                <a href="https://www.instagram.com/edapt.me/" class="ins-ic">
                   <i
                     class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"
                   >
                   </i>
                 </a>
                 <!--Pinterest-->
-                <a class="pin-ic">
-                  <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                <a
+                  href="https://www.youtube.com/channel/UC_S7kxwHUSspieNOkKQkcPQ"
+                  class="pin-ic"
+                >
+                  <i class="fab fa-youtube fa-lg white-text fa-2x"> </i>
                 </a>
               </div>
             </div>
@@ -126,29 +416,30 @@ line-height: 38px;
           <!-- Grid row-->
         </div>
       </div>
-      <div class="container-fluid down py-2 ">
-        <div class="container   text-md-left py-2  ">
+      <div class="container-fluid down py-2">
+        <div class="container text-md-left py-2">
           <!-- Footer links -->
-          <div class="row   text-md-left mt-3 pb-3  ">
+          <div class="row text-md-left mt-3 pb-3">
             <!-- Grid column -->
-            <div class="col-sm-12 col-md-8 col-lg-3 col-xl-3 mx-auto  mt-3">
+            <div class="col-sm-12 col-md-8 col-lg-3 col-xl-3 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold edep">Edapt</h6>
+              <p>Embrace The Change</p>
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa.
-
+                <i class="fas fa-home mr-3"></i> INKEL CITY, MALAPPURAM , IN
               </p>
-                 <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-              <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-              <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-              <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-              <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+              <p><i class="fas fa-envelope mr-3"></i> hello@edapt.me</p>
+              <p>
+                <i class="fas fa-rotate-90 fa-phone mr-3"></i> + 91 8138 954 725
+              </p>
+              <!-- <p><i class="fas fa-rotate-90 fa-phone mr-3"></i> + 01 234 567 89</p> -->
             </div>
             <!-- Grid column -->
 
             <hr class="w-100 clearfix d-md-none" />
 
             <!-- Grid column -->
-            <div class="col-sm-12 col-md-8 col-lg-2 col-xl-2 mx-auto   mt-3" >
+            <div class="col-sm-12 col-md-8 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
               <p>
                 <a style="color: white" href="#!">Edapt plus</a>
@@ -165,16 +456,16 @@ line-height: 38px;
             </div>
             <!-- Grid column -->
 
-            <hr style="color: white;" class="w-100 clearfix d-md-none" />
+            <hr style="color: white" class="w-100 clearfix d-md-none" />
 
             <!-- Grid column -->
-            <div class=" col-sm-12 col-md-8 col-lg-2 col-xl-2 mx-auto   mt-3">
+            <div class="col-sm-12 col-md-8 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
               <p>
-                <a style="color: white" href="#!">About</a>
+                <a style="color: white" href="about.html">About</a>
               </p>
               <p>
-                <a style="color: white" href="#!">Career</a>
+                <a style="color: white" href="career.html">Career</a>
               </p>
 
               <p>
@@ -186,10 +477,11 @@ line-height: 38px;
             <hr class="w-100 clearfix d-md-none" />
 
             <!-- Grid column -->
-            <div class="col-sm-12 col-md-8 col-lg-3 col-xl-3 mx-auto   mt-3">
+            <div class="col-sm-12 col-md-8 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Download now</h6>
-              <p><span><img src="play.png"><img src="app.png"></span></p>
-             
+              <p>
+                <span><img src="play.png" /><img src="app.png" /></span>
+              </p>
             </div>
             <!-- Grid column -->
           </div>

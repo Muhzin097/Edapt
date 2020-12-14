@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link
       rel="stylesheet"
@@ -20,271 +21,20 @@
       rel="stylesheet"
       type="text/css"
     />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="about.css" media="screen" />
     <meta charset="UTF-8" />
-    <style>
-      .ico {
-        color: white;
-        font-size: 2vw;
-        margin-bottom: 5%;
-        margin-top: auto !important;
-        display: block;
-        position: absolute;
-        bottom: 5%;
-         
-        left: 50%;
-        -ms-transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
-      .bounce {
-        -webkit-animation: bounce 2s;
-        animation: bounce 2s;
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
-      }
-
-      @-webkit-keyframes bounce {
-        0%,
-        25%,
-        50%,
-        75%,
-        100% {
-          -webkit-transform: translateY(0);
-          transform: translateY(0);
-        }
-        40% {
-          -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-        }
-        60% {
-          -webkit-transform: translateY(-12px);
-          transform: translateY(-12px);
-        }
-      }
-
-      @keyframes bounce {
-        0%,
-        25%,
-        50%,
-        75%,
-        100% {
-          -webkit-transform: translateY(0);
-          transform: translateY(0);
-        }
-        40% {
-          -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-        }
-        60% {
-          -webkit-transform: translateY(-12px);
-          transform: translateY(-12px);
-        }
-      }
-
-      .ok {
-        /* padding-top: 15%;
-        padding-bottom: 15%; */
-        background-image: url("about.png");
-        background-attachment: fixed;
-        text-align: center;
-        height: 100vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        /* display: inline-block;
-        vertical-align: middle; */
-      }
-      .head {
-        font-family: Source Sans Pro;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 4vw;
-        line-height: 101px;
-        color: white;
-      }
-      .all {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-      }
-      .detail,
-      .detail-2 {
-        color: white;
-        font-family: Source Sans Pro;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1.1vw;
-        line-height: 154.7%;
-      }
-      .ab1 {
-        width: 100% !important;
-        background: #fafafa;
-      }
-      .aut {
-        justify-content: space-around;
-        display: flex;
-        flex-direction: row;
-      }
-      .me {
-        font-family: Source Sans Pro;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 3.5vw;
-        line-height: 88px;
-      }
-      .me1 {
-        font-family: Source Sans Pro;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 3.5vw;
-      }
-      .ne {
-        font-family: Source Sans Pro;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1.5vw;
-        line-height: 38px;
-      }
-      .topy {
-        padding-top: 5%;
-        padding-bottom: 1%;
-        padding-left: 5%;
-        padding-right: 5%;
-      }
-      .head211 {
-        font-size: 3.5vw;
-        display: inline-block;
-        vertical-align: middle;
-      }
-      .dot {
-        height: 10vw;
-        width: 10vw;
-        background: #007aff;
-        border-radius: 50%;
-        display: inline-block;
-        color: #ffffff;
-        position: relative;
-        margin: 0;
-        vertical-align: middle;
-        box-sizing: content-box;
-        white-space: nowrap;
-      }
-      .dot:before {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        padding-top: 100%;
-        height: 0;
-      }
-      .ne1 {
-        font-family: Source Sans Pro;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1.1vw;
-        line-height: 154.7%;
-        /* width: 40%; */
-      }
-      #carousel {
-        width: 100%;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
-
-        margin-bottom: 5%;
-        padding: 5%;
-      }
-
-      #carousel .slide,
-      #carousel .space {
-        display: inline;
-        vertical-align: top;
-        margin-right: 1%;
-      }
-      .space {
-        padding: 20%;
-      }
-      .imc {
-        width: 30%;
-        cursor: grab;
-      }
-      *::-webkit-scrollbar {
-        display: none;
-      }
-
-      /* Hide scrollbar for IE, Edge and Firefox */
-      * {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-      }
-      .sdot {
-        color: #007aff;
-        font-size: 6.5vw;
-      }
-      .car {
-        /* background-attachment: fixed; */
-        width: 100% !important;
-        padding: 0 !important;
-      }
-      @media only screen and (max-width: 1000px) {
-        .ico {
-          font-size: 20px;
-        }
-        .me {
-          font-size: 30px;
-          line-height: 38px;
-        }
-        .ne {
-          font-size: 16px;
-          line-height: 20px;
-        }
-        .imc {
-          width: 80%;
-          cursor: grab;
-        }
-        .ne1 {
-          font-size: 15px;
-          line-height: 154.7%;
-        }
-        .me1,
-        .head211 {
-          font-size: 30px;
-          line-height: 38px;
-        }
-        .dot {
-          height: 90px;
-          width: 90px;
-        }
-        br {
-          display: none;
-        }
-        .head {
-          font-size: 30px;
-          line-height: 38px;
-        }
-        .all {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -ms-transform: translateX(-50%) translateY(-50%);
-          -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-        }
-        .detail,
-        .detail-2 {
-          font-size: 16px;
-          line-height: 20px;
-        }
-      }
-    </style>
+  
+    <title>Edapt : The Future of Ed-Tech</title>
+ <meta name="description" content="Edapt is an evolving community focusing on online counseling services, online courses for the new industrial age , online school.">
+  <meta name="keywords" content="free online courses,free online counselling,free counselling,free psychological counselling,online higher secondary, free learning app, online plus two courses,NIOS classes,edtech company, edtech company in india,edtech company in kerala, online counselling centers in kerala,online students mentoring in kerala,nios study centers in kerala,nios study centers in india">
+   
   </head>
   <body>
-    <div id="nav-placeholder"></div>
+    
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script>
       $.get("nav.html", function (data) {
@@ -306,23 +56,27 @@
         prevScrollpos = currentScrollPos;
       };
     </script> -->
-    <div class="container-fluid ok">
+    <div class="container-fluid ok"  id="main">
       <!-- <img class="img" src="about.png" /> -->
-
+      <div id="nav-placeholder"></div>
       <div class="all">
         <h1 class="head">About</h1>
-        <p class="detail">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat
-          varius sollicitudin pharetra tincidunt
+        <p class="detail m-0">
+          Edapt is an ed-tech company focused on providing users with a set of skills to help them prepare better for the challenges of the rapidly changing world.
+           Edapt has become one of India's fastest-growing e-learning communities.  
         </p>
-        <button type="button" class="btn btn-primary btn-lg my-2">Register now</button>
+        <button type="button" class="btn btn-primary btn-lg my-2">
+          Register now
+        </button>
         <!-- <i style="font-size: 24px; margin-top: 10%; color: white" class="fas"
         >&#xf309;</i> -->
       </div>
-      <i class="fa fa-angle-double-down ico bounce" aria-hidden="true"></i>
+      <a href="#scr">
+        <i class="fa fa-angle-double-down ico bounce" aria-hidden="true"></i
+      ></a>
     </div>
-    <div class="container-fluid ab1">
-      <div class="container aut p-lg-4 px-lg-5 p">
+    <div id="scr" class="container-fluid ab1">
+      <div class="container aut p-lg-4 px-lg-5 pt-2">
         <div class="part">
           <h1 class="me">10000+</h1>
           <p class="ne">Downloads</p>
@@ -345,23 +99,21 @@
         data-aos-anchor-placement="center-bottom"
       >
         <h1 class="me1">
-          It Takes Good people
+          A futuristic learning platform for
           <span class="dot"
             ><h1
               class="head211"
               data-aos="fade-left"
               data-aos-duration="3000"
               data-aos-anchor-placement="bottom-bottom"
-            >
-              do
+            > inform
             </h1></span
-          >
-          <br />good things<span class="sdot">.</span>
+          >ation<br /> seekers and learners of all ages<span class="sdot">.</span>
         </h1>
       </div>
       <div class="row px-4 seen mx-md-4 mx-lg-4">
         <!--Grid column-->
-        <div class="col-lg-5 col-md-10 px-4">
+        <div class="col-lg-5 col-md-10 px-lg-5 p-2" >
           <!--First row-->
           <p
             class="ne1 my-4"
@@ -369,28 +121,27 @@
             data-aos-duration="3000"
             data-aos-anchor-placement="bottom-bottom"
           >
-            Imagine a future during which robotics and AI will allow any folks ,
-            of all ages to simply and quickly find answers, create products or
-            accomplish tasks, all just by expressing our desires. Imagine a
-            future during which robotics and AI will allow any folks , of all
-            ages to simply and quickly find answers, create products or
-            accomplish tasks, all just by expressing our desires.
+          EDAPT provides a personalized learning dashboard that empowers learners to study at their own pace in and outside of the classroom.
+           We tackle futuristic technologies such as artificial intelligence, blockchain, 3D printing and more.<br><br>
+           We live in a world of too much information and too little context. Too much noise and too little insight.
+            And EDAPT's courses guide students through futuristic technologies and everything else that matters.
           </p>
           <!--/First row-->
         </div>
         <!--/Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-5 col-md-10 px-4">
+        <div class="col-lg-5 col-md-10 px-lg-5 p-2">
           <p
             class="ne1 my-4"
             data-aos="fade"
             data-aos-duration="3000"
             data-aos-anchor-placement="bottom-bottom"
           >
-            Imagine a future during which robotics and AI will allow any folks ,
-            of all ages to simply and quickly find answers, create products or
-            accomplish tasks, all just by expressing our desires.
+          At Edapt, students are at the centre of our world. We understand that every student is different and has diverse learning needs.
+           We work relentlessly to solve student intricacies using advanced technology and help them learn better. 
+           We have thoughtfully devised Edapt to ensure that it is a one-stop learning platform. It has learning pieces,
+            including adaptive practise questions, solutions, concepts, and videos that come together seamlessly to give 360° learning.
           </p>
         </div>
         <!--/Grid column-->
@@ -488,7 +239,7 @@
       </div>
       <div class="row px-4 seen mx-md-4 mx-lg-4">
         <!--Grid column-->
-        <div class="col-lg-5 col-md-10 px-4">
+        <div class="col-lg-5 col-md-10 px-lg-5 p-2">
           <!--First row-->
           <p
             class="ne1 my-4 fade"
@@ -496,28 +247,24 @@
             data-aos-duration="3000"
             data-aos-anchor-placement="bottom-bottom"
           >
-            Imagine a future during which robotics and AI will allow any folks ,
-            of all ages to simply and quickly find answers, create products or
-            accomplish tasks, all just by expressing our desires. Imagine a
-            future during which robotics and AI will allow any folks , of all
-            ages to simply and quickly find answers, create products or
-            accomplish tasks, all just by expressing our desires.
+          We are living in some of the most fascinating times of history. Building on the advances of the last three industrial revolutions,
+           humanity is now set to enter one of its most transformative phases – the Fourth Industrial Revolution often referred to as Industry 4.0.
+            New Age requires New Skills. We are First of its kind platform for 21st Century Education.
           </p>
           <!--/First row-->
         </div>
         <!--/Grid column-->
 
         <!--Grid column-->
-        <div class="col-lg-5 col-md-10 px-4">
+        <div class="col-lg-5 col-md-10 px-lg-5 p-2">
           <p
             class="ne1 my-4 fade"
             data-aos="fade-up"
             data-aos-duration="3000"
             data-aos-anchor-placement="bottom-bottom"
           >
-            Imagine a future during which robotics and AI will allow any folks ,
-            of all ages to simply and quickly find answers, create products or
-            accomplish tasks, all just by expressing our desires.
+          To help cope with the change, Edapt team is reinventing the curriculum design constantly. You can acquire new skills on the go. 
+          To be relevant to the changing times, Edapt provides the skills to best address tomorrow's challenges and harness the numerous opportunities.
           </p>
         </div>
         <!--/Grid column-->
@@ -528,7 +275,10 @@
     <script>
       AOS.init();
     </script>
-    
+ <script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
+ <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
+ <script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+ <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

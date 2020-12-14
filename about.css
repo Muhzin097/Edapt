@@ -1,0 +1,262 @@
+ 
+html {
+  scroll-behavior: smooth;
+}
+.ico {
+  color: white;
+  font-size: 2vw;
+  margin-bottom: 5%;
+  margin-top: auto !important;
+  display: block;
+  position: absolute;
+  bottom: 5%;
+
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.bounce {
+  -webkit-animation: bounce 2s;
+  animation: bounce 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  60% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  60% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+  }
+}
+
+.ok {
+  /* padding-top: 15%;
+  padding-bottom: 15%; */
+  background-image:linear-gradient(180deg, rgba(0, 0, 0, 0.8) 5.73%, rgba(0, 0, 0, 0) 100%), url("about.png");
+  background-attachment: fixed;
+  text-align: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+          background-position: center;
+
+  /* display: inline-block;
+  vertical-align: middle; */
+}
+.head {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4vw;
+  line-height: 101px;
+  color: white;
+}
+.all {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.detail,
+.detail-2 {
+  color: white;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1vw;
+  line-height: 154.7%;
+}
+.ab1 {
+  width: 100% !important;
+  background: #fafafa;
+}
+.aut {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+}
+.me {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.5vw;
+  line-height: 88px;
+}
+.me1 {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5vw;
+}
+.ne {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5vw;
+  line-height: 38px;
+}
+.topy {
+  padding-top: 5%;
+  padding-bottom: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.head211 {
+  font-size: 3.5vw;
+  display: inline-block;
+  vertical-align: middle;
+}
+.dot {
+  height: 10vw;
+  width: 10vw;
+  background: #007aff;
+  border-radius: 50%;
+  display: inline-block;
+  color: #ffffff;
+  position: relative;
+  margin: 0;
+  vertical-align: middle;
+  box-sizing: content-box;
+  white-space: nowrap;
+}
+.dot:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 100%;
+  height: 0;
+}
+.ne1 {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1vw;
+  line-height: 154.7%;
+  /* width: 40%; */
+}
+#carousel {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  margin-bottom: 5%;
+  padding: 5%;
+}
+
+#carousel .slide,
+#carousel .space {
+  display: inline;
+  vertical-align: top;
+  margin-right: 1%;
+}
+.space {
+  padding: 20%;
+}
+.imc {
+  width: 30%;
+  cursor: grab;
+}
+#carousel::-webkit-scrollbar,.container-fluid::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#carousel,.container-fluid{
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.sdot {
+  color: #007aff;
+  font-size: 6.5vw;
+}
+.car {
+  /* background-attachment: fixed; */
+  width: 100% !important;
+  padding: 0 !important;
+}
+@media only screen and (max-width: 1000px) {
+  .ico {
+    font-size: 20px;
+  }
+  .me {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .ne {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .imc {
+    width: 80%;
+    cursor: grab;
+  }
+  .ne1 {
+    font-size: 15px;
+    line-height: 154.7%;
+  }
+  .me1,
+  .head211 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .dot {
+    height: 90px;
+    width: 90px;
+  }
+  br {
+    display: none;
+  }
+  .head {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .all {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .detail,
+  .detail-2 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+ 

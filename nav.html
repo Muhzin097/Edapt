@@ -55,6 +55,9 @@
         color: white;
         /* font-size: calc(16px + (8)*(100vw - 300px)/1500  ); */
       }
+      /* .b{
+        color:black;
+      } */
       .smart-scroll {
         position: fixed;
         top: 0;
@@ -81,36 +84,107 @@
       html {
         height: 100%;
       }
-       
+
       .page-footer,
       .top-nav-collapse {
         background-color: transparent !important;
       }
-      @media only screen and (max-width: 768px) {
-        .navbar {
-          /* background-color: rgba(0, 0, 0, 0.4) !important; */
-          background-color: transparent !important;
+      @media only screen and (min-width: 991px) {
+        .mobshow {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 991px) {
+        .lapshow {
+          display: none;
+        }
+
+        /*         
+        .thiss{
+          
+         padding: 5% !important;
+        background-color: #fff !important;
+         width: 60% !important;
+      }
+      .thisy{
+        padding: 0% !important; 
+      }
+      .ex{
+        color:#007aff !important;
+      } */
+      }
+      .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+
+      .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidebar a:hover {
+        color: #f1f1f1;
+      }
+
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+
+      .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+      }
+
+      .openbtn:hover {
+        background-color: #444;
+      }
+
+      #main {
+        transition: margin-left 0.5s;
+        
+      }
+
+      /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+      @media screen and (max-height: 450px) {
+        .sidebar {
+          padding-top: 15px;
+        }
+        .sidebar a {
+          font-size: 18px;
         }
       }
     </style>
   </head>
   <body>
-    <!-- <script>
-      new WOW().init();
-    </script> -->
-
-    <div class="outer">
+    <div class="outer lapshow">
       <nav
-        class="navbar smart-scroll fixed-top navbar-expand-lg navbar-dark scrolling-navbar"
+        class="navbar smart-scroll fixed-top navbar-expand-lg navbar-dark thisy scrolling-navbar"
       >
-        <!-- <a class="navbar-brand" href="#">
-            <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-            Bootstrap
-          </a> -->
         <div>
-          <a class="navbar-brand" href="edaptwellness.html">Edapt</a>
+          <a class="navbar-brand" href="index.html">Edapt</a>
         </div>
-
         <button
           class="navbar-toggler"
           type="button"
@@ -123,40 +197,60 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse thiss" id="navbarSupportedContent">
           <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-              <a class="nav-link ex" href="edaptwellness.html"
+            <li class="nav-item px-3">
+              <a class="nav-link ex" href="index.html"
                 >Home <span class="sr-only">(current)</span></a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
               <a class="nav-link ex" href="about.html">About Us</a>
             </li>
-            <!-- <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Login
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Existing</a>
-              <a class="dropdown-item" href="#">New</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li> -->
+            <li class="nav-item px-3">
+              <a class="nav-link ex" href="blogs.html">Blogs</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link ex" href="career.html">Career</a>
+            </li>
           </ul>
         </div>
       </nav>
     </div>
+    <div class="mobshow">
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blogs.html"> Blogs</a>
+        <a href="career.html">Career</a>
+      </div>
+      <div class="row justify-content-between p-2">
+        <div>
+          <a class="navbar-brand" style="color: white" href="index.html"
+            >Edapt</a
+          >
+        </div>
+        <div onclick="openNav()">
+          <i
+            class="fa fa-bars"
+            style="font-size: 26px; color: white"
+            aria-hidden="true"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
 
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
     <script>
       $(document).ready(function () {
         var url = window.location;
@@ -178,8 +272,6 @@
       });
     </script>
     <script>
-      
-
       // detect scroll top or down
       if ($(".smart-scroll").length > 0) {
         // check if element exists
