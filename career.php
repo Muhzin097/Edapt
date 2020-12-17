@@ -1,3 +1,17 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "edapt";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password ,$dbname);
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+// echo "Connected successfully";
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -44,7 +58,9 @@
         font-size: 3.5vw;
         line-height: 41px;
       }
-
+      .barry{
+  color: black !important;
+}
       /* Hide scrollbar for IE, Edge and Firefox */
       #carousel,
       .container-fluid {
@@ -168,7 +184,9 @@
         $("#footer").replaceWith(data1);
       });
     </script>
-
+   
+   
+ 
     <div class="container-fluid p-4 pt-o" id="main">
       <div id="nav-placeholder"></div>
       <div class="col-sm-12 col-md-8 col-lg-6 p-lg-5 m-lg-5 p-0">
@@ -209,19 +227,31 @@
           role="tablist"
           aria-orientation="vertical"
         >
+        <?php
+    $sql = "SELECT * FROM career";
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+        // echo "id: " . $row["Position"].  "<br>";
+   
+     
+    ?>
           <a
-            class="nav-link active"
+            class="nav-link "
             id="v-pills-home-tab"
             data-toggle="pill"
-            href="#v-pills-home"
+            href="#v-pills-<?php echo $row["id"]; ?>"
             role="tab"
             aria-controls="v-pills-home"
             aria-selected="true"
           >
             <!-- <span class="nw"></span> -->
-            Flutter Dev</a
+            <?php echo $row["Position"]; ?></a
           >
-          <a
+          <?php }} ?>
+          <!-- <a
             class="nav-link"
             id="v-pills-profile-tab"
             data-toggle="pill"
@@ -240,31 +270,41 @@
             aria-controls="v-pills-messages"
             aria-selected="false"
             >Angular Dev</a
-          >
+          > -->
         </div>
+        
         <div class="tab-content col-md-8 col-lg-8 pr-lg-5 bar" id="v-pills-tabContent">
+        <?php
+    $sql = "SELECT * FROM career " ;
+    $result = $conn->query($sql);
+    
+    if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+        // echo "id: " . $row["Position"].  "<br>";
+   
+     
+    ?>
           <div
-            class="tab-pane fade show active"
-            id="v-pills-home"
+            class="tab-pane fade show "
+            id="v-pills-<?php echo $row["id"]; ?>"
             role="tabpanel"
             aria-labelledby="v-pills-home-tab"
           >
-            <h3 class="dim ">Flutter Developer</h3>
-            <h5 class="detail41 mt-4">No of positions - 5</h5>
+            <h3 class="dim "> <?php echo $row["Position"]; ?></h3>
+            <h5 class="detail41 mt-4">No of positions - <?php echo $row["Number"]; ?></h5>
             <h5 class="detail41 mt-4">Description</h5>
             <p class="detail4">
-              Imagine a future during which robotics and AI will allow any folks
-              , of all ages to simply and quickly find answers, create products
-              or accomplish tasks, all just by expressing our desires.
+            <?php echo $row["Description"]; ?>
             </p>
             <h5 class="detail41 mt-4">Qualifications</h5>
-            <p class="detail4">tasks, all just by expressing our desires.</p>
+            <p class="detail4"><?php echo $row["Qualification"]; ?></p>
             <h5 class="detail41 mt-4">Mail your CV to</h5>
-            <p class="detail4">abcd@gmail.com</p>
+            <p class="detail4"><?php echo $row["Mail"]; ?></p>
             <button type="button" class="btn btn-lg btn-dark">Apply now</button>
           </div>
-         
-          <div
+          <?php }} ?>
+          <!-- <div
             class="tab-pane fade"
             id="v-pills-profile"
             role="tabpanel"
@@ -283,8 +323,8 @@
           <h5 class="detail41 mt-4">Mail your CV to</h5>
           <p class="detail4">abcd@gmail.com</p>
           <button type="button" class="btn btn-lg btn-dark">Apply now</button>
-          </div>
-          <div
+          </div> -->
+          <!-- <div
             class="tab-pane fade"
             id="v-pills-messages"
             role="tabpanel"
@@ -303,7 +343,7 @@
           <h5 class="detail41 mt-4">Mail your CV to</h5>
           <p class="detail4">abcd@gmail.com</p>
           <button type="button" class="btn btn-lg btn-dark">Apply now</button>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

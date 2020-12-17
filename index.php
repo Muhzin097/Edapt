@@ -1,9 +1,23 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "edapt";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+// echo "Connected successfully";
+?>
 <!DOCTYPE html>
 <html>
   <!-- git push origin main -->
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+    <link rel="icon" href="assets/fav.png" type="image/gif" sizes="16x16">
  <meta title="Edapt : Embrace The Change">
  <meta name="description" content="Edapt is born from the natural need of people to connect with oneself and with others in a critical period such as the one we are living .">
   <meta name="keywords" content="Edapt wellness,Edapt school, edapt classroom,psychological counselling,online counselling,online mentoring, online class,nios study center,nios school, online courses, online courses with certificates,online certificate courses, edtech app,learning app,online learning">
@@ -44,7 +58,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button> -->
-        <div class="collapse navbar-collapse navi d-flex justify-content-center" id="navbarNav">
+        <div class="collapse navbar-collapse navi d-flex justify-content-lg-center" id="navbarNav">
           <ul class="navbar-nav d-flex justify-content-between  ">
             <li class="nav-item active px-5">
               <a class="nav-link text-light" href="#edw">Edapt Wellness <span class="sr-only">(current)</span></a>
@@ -95,22 +109,22 @@
         class="container-fluid three py-5 "
         data-aos="fade-up"
         data-aos-anchor-placement="center-bottom"
-        data-aos-duration="3000"
+        data-aos-duration="1500"
       >
         <div class=" col-sm-12 col-md-5 col-lg-5  ">
-          <!-- <img class="himg" src="twopic.png" /> -->
+          <!-- <img class="himg" src="assets/twopic.png" /> -->
           <div class="bor">
             <img
               class="r1"
               data-aos="fade-up-right"
-              data-aos-duration="3000"
-              src="r1.png"
+              data-aos-duration="1500"
+              src="assets/r1.png"
             />
             <img
               class="r2"
               data-aos="fade-up-left"
-              data-aos-duration="3000"
-              src="r2.png"
+              data-aos-duration="1500"
+              src="assets/r2.png"
             />
           </div>
         </div>
@@ -119,12 +133,12 @@
             Our Vision
             <span class="dot"><h1 class="head21"  data-aos="fade-left"
               data-aos-anchor-placement="center-bottom"
-              data-aos-duration="3000">And</h1></span>Mission<span
+              data-aos-duration="1500">And</h1></span>Mission<span
               class="sdot"
               >.</span
             >
           </h1>
-          <p class="detail3">
+          <p class="detail3 pt-3">
             Bring inspiration and innovation to every student. Our purpose is to empower every student in this world to achieve their best.
           </p>
           <p class="detail3">
@@ -151,9 +165,9 @@ The skill sets required in both old and new occupations will change in most indu
           class="col-sm-12 col-md-5 col-lg-4 "
           data-aos="fade-right"
           data-aos-anchor-placement="bottom-bottom"
-          data-aos-duration="3000"
+          data-aos-duration="1500"
         >
-          <h1 class="plush">Edapt Plus</h1>
+          <h1 class="plush pt-3">Edapt Plus</h1>
         </div>
         <div class="col-sm-12 col-md-7 col-lg-8 pr-0">
           <p class="plusp">
@@ -164,19 +178,19 @@ The skill sets required in both old and new occupations will change in most indu
           <button type="button" class="btn btn-lg btn-dark">Learn more</button>
         </div>
       </div>
-      <div class=" mb-lg-5" id="carousel" data-aos="fade-right" data-aos-duration="3000">
+      <div class=" mb-lg-5" id="carousel" data-aos="fade-right" data-aos-duration="1500">
         <div class="space"></div>
         <div class="slide">
-          <img class="imc" src="im1.png" />
+          <img class="imc" src="assets/im1.png" />
         </div>
         <div class="slide">
-          <img class="imc" src="im2.png" />
+          <img class="imc" src="assets/im2.png" />
         </div>
         <div class="slide">
-          <img class="imc" src="im3.png" />
+          <img class="imc" src="assets/im3.png" />
         </div>
         <div class="slide">
-          <img class="imc" src="im4.png" />
+          <img class="imc" src="assets/im4.png" />
         </div>
         
       </div>
@@ -210,11 +224,11 @@ The skill sets required in both old and new occupations will change in most indu
       <div class=" row   my-4 py-4" 
       data-aos="fade-up"
       data-aos-anchor-placement="center-bottom"
-      data-aos-duration="3000">
+      data-aos-duration="1500">
         <div class="col-sm-12 col-md-6 col-lg-6  p-0">
           <img
           class="himg  p-0"
-            src="iml.png"
+            src="assets/iml.png"
           />
         </div>
         <div
@@ -225,7 +239,7 @@ The skill sets required in both old and new occupations will change in most indu
             <span class="dot"
               ><h1 class="head211"  data-aos="fade-right"
               data-aos-anchor-placement="center-bottom"
-              data-aos-duration="3000">
+              data-aos-duration="1500">
                 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Su
               </h1></span
             >perAchievers
@@ -245,7 +259,7 @@ The skill sets required in both old and new occupations will change in most indu
     <div class="container-fluid mt-lg-5 p-0" id="sch">
       <div class="  d-flex flex-wrap-reverse" data-aos="fade-up"
       data-aos-anchor-placement="center-bottom"
-      data-aos-duration="3000">
+      data-aos-duration="1500">
         <div
           class="col-sm-12 col-md-6 col-lg-6 p-xl-5  "
           
@@ -253,7 +267,7 @@ The skill sets required in both old and new occupations will change in most indu
         <h1 class="head22">
           Scho<span class="dot"><h1 class="head211"  data-aos="fade-left"
             data-aos-anchor-placement="center-bottom"
-            data-aos-duration="3000">ol</h1></span>
+            data-aos-duration="1500">ol</h1></span>
         </h1>
           <p class="detail4 ">
             Edapt school is the first online school that delivers a fully interactive education to the comfort of your home or wherever you may be.
@@ -267,7 +281,7 @@ The skill sets required in both old and new occupations will change in most indu
           <img
             class="himg"
              
-            src="light.png"
+            src="assets/light.png"
           />
         </div>
       </div>
@@ -275,12 +289,12 @@ The skill sets required in both old and new occupations will change in most indu
     <div class="container-fluid  mt-lg-5" id="cla">
       <div class="row " data-aos="fade-up"
       data-aos-anchor-placement="center-bottom"
-      data-aos-duration="3000">
+      data-aos-duration="1500">
         <div class="col-sm-12 col-md-6 col-lg-6 p-0">
           <img
             class="himg p-0"
              
-            src="cl.png"
+            src="assets/cl.png"
           />
         </div>
         <div
@@ -290,7 +304,7 @@ The skill sets required in both old and new occupations will change in most indu
           <h1 class="head22">
             Classroo<span class="dot"><h1 class="head211"  data-aos="fade-left"
               data-aos-anchor-placement="center-bottom"
-              data-aos-duration="3000">m</h1></span>
+              data-aos-duration="1500">m</h1></span>
           </h1>
           <p class="detail4">
             Take your classes online for free. Edapt classroom is a free service for all educational institutions.
@@ -302,132 +316,84 @@ The skill sets required in both old and new occupations will change in most indu
         </div>
       </div>
     </div>
-    <div class="container-fluid mt-3  mt-lg-5 bg-light p-lg-5 p-sm-2"  >
-      <h1 class="head22   text-sm-center ">Insights from the Blogs</h1>
-      <p class="detail4  text-sm-center ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse</p>
-<div class="row justify-content-center p-lg-5 m-lg-5">
-  <div class="col-sm-12 col-md-6 col-lg-6" data-aos="fade-up"
-  data-aos-anchor-placement="bottom-bottom"
-  data-aos-duration="3000">
-    <img
-    class="himg"
-    src="bl1.png"
-  />
-  <a href="https://medium.com/@edapt.me/ai-and-business-60c1e91614a1" style="color: black;"><h3 class="smallh">
-    AI and Business
-  </h3></a>
-  <h5 class="dt">
-    Dec 2 2020
-  </h5>
-  <p class="detail4 mr-lg-4">
-    What is Artificial Intelligence?<br>
-Artificial intelligence is not new.<br>
-It has been around for decades.<br>
-Enthusiasm about AI has spilled over from the technology and business communities into government policy making, and it has trickled all the way down to primary school classrooms.
-  </p>
-  </div>
-  <div class="col-sm-12 col-md-6 col-lg-6 " data-aos="fade-up"
-    data-aos-anchor-placement="bottom-bottom"
-    data-aos-duration="3000">
-    <img
-    class="himg"
-    src="bl2.png"
-  />
- 
-  <a href="https://medium.com/@edapt.me/should-we-be-frightened-of-a-i-d09d60208e3a" style="color: black;"><h3 class="smallh">
-    Should we be Frightened of A.I ?
-  </h3></a>
-  <h5 class="dt">
-    Nov 25 2020
-  </h5>
-  <p class="detail4 mr-lg-4">
-    I want to ask should we be scared of A.I? So let’s talk about artificial intelligence and where we are in the world right now. Now the question is, is that worrisome for our future? Does this mean computers are gonna take over the world and and squish human beings? The answer is probably not. Because AI is very very clever at extremely narrow sorts of tasks, like discriminating cats and dogs, playing chess, playing go, and all kinds of other very impressive things. …
-  </p>
-  </div>
-</div>
-<div class="row justify-content-center p-lg-5  m-lg-5">
-  <div class="col-sm-12 col-md-4 col-lg-4   " data-aos="fade-up"
-  data-aos-anchor-placement="bottom-bottom"
-  data-aos-duration="3000">
-    <div class="row  ">
-      <img
-      class="himg1 col-6"
-      src="bl3.png"
-    />
-    <div  class="  col-6">
-      <a href="https://medium.com/@edapt.me/every-cloud-has-a-silver-lining-7d37e6904efb" style="color: black;">
-        <h3 class="smallh ">
-          Every Cloud Has a Silver Lining
-        </h3>
-      </a>
+    <div class="container-fluid mt-3  mt-lg-5 bg-light p-lg-5 p-sm-2">
+    <h1 class="head22   text-sm-center ">Insights from the Blogs</h1>
+    <p class="detail4  text-sm-center ">Read our latest Blogs</p>
+    <div class="row justify-content-center p-lg-5 m-lg-5">
+    <?php
+      $sql = "SELECT * FROM blog ORDER BY id DESC LIMIT 2";
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+        // output data of each row
+        while ($row = $result->fetch_assoc()) {
+          // echo "id: " . $row["Position"].  "<br>";
+
+
+      ?>
+      <div class="col-sm-12 col-md-6 col-lg-6" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1500">
+        <img   class="himg" style="height: 100%;" src=" <?php echo $row["pic"]; ?>" />
+        <a href="blogdetails.php?nid=<?php echo $row["id"]; ?>" target="_blank" style="color: black;">
+          <h3 class="smallh">
+          <?php echo $row["head"]; ?>
+          </h3>
+        </a>
+        <h5 class="dt">
+        <?php echo $row["date"]; ?>
+        </h5>
+        <p class="detail4 mr-lg-4">
+        <?php echo $row["short"]; ?>
+        </p>
+      </div>
+      <?php }} ?>
+     
+    </div>
+    <div class="row justify-content-center p-lg-5  m-lg-5">
+    <?php
+      $sql = "  SELECT * FROM (
+        SELECT * FROM blog ORDER BY id DESC LIMIT 5
+    ) sub
+    ORDER BY id ASC LIMIT 3";
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+        // output data of each row
+        while ($row = $result->fetch_assoc()) {
+          // echo "id: " . $row["Position"].  "<br>";
+
+
+      ?>
+      <div class="col-sm-12 col-md-4 col-lg-4   " data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1500">
+        <div class="row  ">
+          <img class="himg1 col-6" src="<?php echo $row["pic"]; ?>" />
+          <div class="  col-6">
+            <a href="blogdetails.php?nid=<?php echo $row["id"]; ?>" target="_blank" style="color: black;">
+              <h3 class="smallh ">
+              <?php echo $row["head"]; ?>
+              </h3>
+            </a>
+
+            <p class="detail4 mr-lg-4">
+            <?php echo $row["short"]; ?>
+            </p>
+            <h5 class="dt">
+            <?php echo $row["date"]; ?>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <?php }} ?>
       
-      <p class="detail4 mr-lg-4">
-        Keep aside your worries about a bad monsoon because “Every Cloud Has a Silver Lining”.
-      </p>
-      <h5 class="dt">
-        Aug 2 2020
-      </h5>
     </div>
+    <div class="p-5  mx-auto">
+      <a href="blogs.php"><button type="button" class="btn btn-lg btn-dark">Know more</button></a>
     </div>
-  </div>
-  <div class="col-sm-12 col-md-4 col-lg-4" data-aos="fade-up"
-  data-aos-anchor-placement="bottom-bottom"
-  data-aos-duration="3000">
-  <div class="row  ">
-    <img
-    class="himg1 col-6"
-    src="bl4.png"
-  />
-  <div  class="  col-6">
-    <a href="" style="color: black;">
 
-    </a>
-    <h3 class="smallh ">
-      DATAISM 
-    </h3>
-    <p class="detail4 mr-lg-4">
-      I want to ask should we be scared of A.I? So let’s talk about artificial intelligence and where we are in the world right now. 
-    </p>
-    <h5 class="dt">
-      Sep 7 2020
-    </h5>
   </div>
-  </div>
-  </div>
-  <div class="col-sm-12 col-md-4 col-lg-4" data-aos="fade-up"
-  data-aos-anchor-placement="bottom-bottom"
-  data-aos-duration="3000">
-  <div class="row  ">
-    <img
-    class="himg1 col-6"
-    src="bl5.png"
-  />
-  <div  class="  col-6">
-    <a href="" style="color: black;">
-
-    </a>
-    <h3 class="smallh ">
-      Every Cloud Has..  
-    </h3>
-    <p class="detail4 mr-lg-4">
-      I want to ask should we be scared of A.I? So let’s talk about artificial intelligence and where we are in the world right now. 
-    </p>
-    <h5 class="dt">
-      Oct 16 2020
-    </h5>
-  </div>
-  </div>
-  </div>
-</div>
-<div class="p-5  mx-auto">
-  <a href="blogs.html"><button type="button"  class="btn btn-lg btn-dark">Know more</button></a>
-</div>
-
-    </div>
     <div class="container-fluid  mt-lg-5 p-lg-5 p-sm-2 ">
       <div class=" p-lg-5 mx-lg-5  col-sm-12 col-md-6 col-lg-6 ">
         <h1 class="head22   ">Contact us</h1>
-        <p class="detail4   ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mauris sed amet, justo. A mattis neque urna vel tellus. Cras ac, laoreet vel dolor arcu consectetur. </p>
+        <p class="detail4   ">Leave your details and let us contact you.</p>
   
       </div>
       <!-- <div class="row justify-content-between px-lg-5 mx-lg-5  px-md-4  ">
@@ -463,7 +429,7 @@ Enthusiasm about AI has spilled over from the technology and business communitie
    
     <div class="col-12 col-sm-12 col-md-6 col-lg-6 p-2 p-lg-5 ">
       <div class="col-lg-8 mx-auto py-5">
-        <h1 class="medh">Connect with us</h1>
+        <h1 class="smallh">Connect with us</h1>
         <form action='https://forms.zohopublic.in/edaptme/form/Edaptmaincontactus/formperma/pJb58dHUDw4PBSLCamQ9uO9HLGw5IeOox6uUnPSzNXA/htmlRecords/submit' name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
           <input type="hidden" name="zf_referrer_name" value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
           <input type="hidden" name="zf_redirect_url" value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->

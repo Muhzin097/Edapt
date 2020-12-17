@@ -4,7 +4,7 @@
       rgba(0, 0, 0, 0.8) 5.73%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("hom.png");
+    url("assets/hom.png");
   background-attachment: fixed;
   text-align: center;
   height: 100vh;
@@ -12,6 +12,7 @@
   background-size: cover;
   background-position: center;
 }
+
 .navt {
   position: absolute;
   top: 53px;
@@ -31,8 +32,8 @@ backdrop-filter: blur(4px);
  
 
  li{
-display: inline;
-vertical-align: top;
+/* display: inline; */
+ 
 }
 .head {
   color: white;
@@ -79,6 +80,7 @@ vertical-align: top;
 } */
 .himg {
   width: 100%;
+  
 }
 .smallh {
   font-family: Source Sans Pro;

@@ -21,9 +21,13 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>My Book</title>
+    <title>Edapt</title>
     <meta charset="UTF-8" />
     <style>
+      .sidebar .closebtn:hover  {
+      transform: rotate(90deg);
+      }
+      
       .navbar {
         width: 100%;
         scroll-snap-align: start;
@@ -147,7 +151,9 @@
         font-size: 36px;
         margin-left: 50px;
       }
-
+.barry{
+  color: white;
+}
       .openbtn {
         font-size: 20px;
         cursor: pointer;
@@ -183,7 +189,7 @@
         class="navbar smart-scroll fixed-top navbar-expand-lg navbar-dark thisy scrolling-navbar"
       >
         <div>
-          <a class="navbar-brand" href="index.html">Edapt</a>
+          <a class="navbar-brand" href="index.php"> <img style="width: 120px;" src="assets/logg.png"></a>
         </div>
         <button
           class="navbar-toggler"
@@ -200,7 +206,7 @@
         <div class="collapse navbar-collapse thiss" id="navbarSupportedContent">
           <ul class="nav navbar-nav navbar-right">
             <li class="nav-item px-3">
-              <a class="nav-link ex" href="index.html"
+              <a class="nav-link ex" href="index.php"
                 >Home <span class="sr-only">(current)</span></a
               >
             </li>
@@ -208,10 +214,10 @@
               <a class="nav-link ex" href="about.html">About Us</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link ex" href="blogs.html">Blogs</a>
+              <a class="nav-link ex" href="blogs.php">Blogs</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link ex" href="career.html">Career</a>
+              <a class="nav-link ex" href="career.php">Career</a>
             </li>
           </ul>
         </div>
@@ -220,21 +226,21 @@
     <div class="mobshow">
       <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="index.html">Home</a>
+        <a href="index.php">Home</a>
         <a href="about.html">About</a>
-        <a href="blogs.html"> Blogs</a>
-        <a href="career.html">Career</a>
+        <a href="blogs.php"> Blogs</a>
+        <a href="career.php">Career</a>
       </div>
       <div class="row justify-content-between p-2">
         <div>
-          <a class="navbar-brand" style="color: white" href="index.html"
-            >Edapt</a
+          <a class="navbar-brand" style="color: white" href="index.php"
+            > <img style="width: 120px;" src="assets/logg.png"></a
           >
         </div>
         <div onclick="openNav()">
           <i
-            class="fa fa-bars"
-            style="font-size: 26px; color: white"
+            class="fa fa-bars barry"
+            style="font-size: 26px; margin-top: 5px;"
             aria-hidden="true"
           ></i>
         </div>
